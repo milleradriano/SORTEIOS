@@ -24,11 +24,7 @@ namespace SORTEIOS
                     textItemLinha.Text = "14";
 
                 }
-
-            }
-            
-           
-
+            }   
 
         }
 
@@ -190,11 +186,19 @@ namespace SORTEIOS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string data, hora;
-            data = System.IO.File.GetLastWriteTime(System.Reflection.Assembly.GetExecutingAssembly().Location).ToShortDateString();
-            hora = System.IO.File.GetLastWriteTime(System.Reflection.Assembly.GetExecutingAssembly().Location).ToShortTimeString();
-            this.Text = "Nº Sorteados - " + data + " " + hora;
-            lblNumSorteados.Text = "";
+            try
+            {
+                textValorMinimo.Focus();
+                string data, hora;
+                data = System.IO.File.GetLastWriteTime(System.Reflection.Assembly.GetExecutingAssembly().Location).ToShortDateString();
+                hora = System.IO.File.GetLastWriteTime(System.Reflection.Assembly.GetExecutingAssembly().Location).ToShortTimeString();
+                this.Text = "Nº Sorteados - " + data + " " + hora;
+                lblNumSorteados.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro ao carregar {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
         private bool TodosCamposPreenchidos()

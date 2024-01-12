@@ -113,7 +113,6 @@
             textMaisSorteado.Name = "textMaisSorteado";
             textMaisSorteado.Size = new Size(75, 23);
             textMaisSorteado.TabIndex = 5;
-            textMaisSorteado.Text = "10";
             textMaisSorteado.KeyDown += pressionaEnter;
             // 
             // comboBox1
@@ -169,7 +168,6 @@
             textValorMaximo.Name = "textValorMaximo";
             textValorMaximo.Size = new Size(100, 23);
             textValorMaximo.TabIndex = 1;
-            textValorMaximo.Text = "2";
             textValorMaximo.KeyDown += pressionaEnter;
             // 
             // textValorMinimo
@@ -178,7 +176,6 @@
             textValorMinimo.Name = "textValorMinimo";
             textValorMinimo.Size = new Size(100, 23);
             textValorMinimo.TabIndex = 0;
-            textValorMinimo.Text = "1";
             textValorMinimo.KeyDown += pressionaEnter;
             // 
             // groupBox2
